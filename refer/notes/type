@@ -1,0 +1,5 @@
+(1) the length of "long int"
+All stardards do not define the length of Integer types, acutally defined by the compiler,
+and we just testing it on Ubuntu:
+4:  in x32 os
+8:  in x64 os

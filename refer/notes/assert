@@ -1,0 +1,13 @@
+PG:204  7.2 Diagnostics <assert.h>
+
+ref:    2 The assert macro shall be implemented as a macro, not as an actual function. If the
+macro definition is suppressed in order to access an actual function, the behavior is
+undefined.
+
+note:   We can not implemente it, so the user who use this lib should concern the naming problem, 
+to prevent the herself functions have the same name with these macros.
+
+tips:   not use DEBUG
+#define NDEBUG
+#include <assert.h>
+
