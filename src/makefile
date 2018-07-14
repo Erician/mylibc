@@ -1,5 +1,5 @@
 .PHONY: clean 
-MYLIBC = ../obj/mylic.a
+MYLIBC = ../obj/mylibc.a
 PRODUCTS = $(MYLIBC)
 default: $(PRODUCTS)
 
@@ -26,7 +26,7 @@ LD = gcc
 #enplaination of nostdlib: https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html
 CFLAGS = -g -O2 -nostdlib -nostdinc -fno-builtin -fstack-protector
 CFLAGS += -Wall -Wformat -Wunused -Werror -I. 
-CFLAGS += -std=c11
+CFLAGS += -ansi
 
 $(PRODUCTS): $(OBJS)     
 	$(AR) -o $@  $^ 
